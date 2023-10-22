@@ -79,19 +79,22 @@
 
 	<div class="registro d-flex justify-content-center align-items-center">
 		<form action="#" class="d-flex bg-primary flex-column div-registro" method="post">
-			<label for="titulo">Titulo:</label>
+			<label for="titulo">Nome:</label>
 			<input type="text" name="titulo" id="titulo">
 
-			<label for="descricao">descricao:</label>
+			<label for="descricao">Descricao:</label>
 			<input type="text" name="descricao" id="descricao">
 
-			<label for="preco">preco:</label>
+			<label for="preco">Preco:</label>
 			<input type="text" name="preco" id="preco">
 
-			<label for="tamanho">tamanho:</label>
+			<label for="tamanho">Tamanho:</label>
 			<input type="text" name="tamanho" id="tamanho">
 
-			<label for="foto">foto:</label>
+			<label for="tamanho">Estilo:</label>
+			<input type="text" name="tamanho" id="tamanho">
+
+			<label for="foto">Foto:</label>
 			<input type="file" name="foto" id="foto">
 		</form>
 
