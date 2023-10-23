@@ -406,25 +406,44 @@
       </nav>
       <!-- End Navbar -->
       <div class="pt-3 drop-zone h-25 w-100">
-        <!-- posts -->
+        <!-- Postar algo novo -->
+        <div class="card bg-gradient-dark mb-4 draggable" draggable="true">
+          <div class="card-body p-3">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="d-flex flex-column h-100">
+                  <h3 class="text-white">Cadastrar trabalho</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="card mb-4 draggable" draggable="true">
           <div class="card-body p-3">
             <div class="row">
               <div class="col-lg-6">
                 <div class="d-flex flex-column h-100">
                   <label for="titulo">titulo</label>
-                  <input name="titulo" class="form-control bg-gradient-secondary px-3 text-white" value="teste"></input>
+                  <input name="titulo" id="tituloItem" class="form-control bg-gradient-secondary px-3 text-white" value=""></input>
 
                   <label for="descricao">descricao</label>
-                  <input id="descricaoItem" name="descricao" class="form-control bg-gradient-secondary px-3 text-white" value="teste2 aksakskaskaskaskasak"></input>
+                  <input id="descricaoItem" name="descricao" class="form-control bg-gradient-secondary px-3 text-white" value=""></input>
 
                   <label for="tamanho" >tamanho</label>
-                  <input id="tamanhoItem" name="tamanho" class="form-control bg-gradient-secondary px-3 text-white" value="teste3" class="mb-5">
+                  <div class="d-flex justify-content-center align-items-center">
+                  <span class="form-control w-25 bg-gradient-primary px-1 text-white">Centimetros</span><input id="tamanhoItem" name="tamanho" class="form-control bg-gradient-secondary px-3 text-white" value="" class="mb-5">
+                  </div>
+
+                  <label for="estilo" >estilo</label>
+                  <input id="estiloItem" name="estilo" class="form-control bg-gradient-secondary px-3 text-white" value="" class="mb-5">
 
                   <label for="preco" >Preço</label>
                   <div class="d-flex justify-content-center align-items-center">
-                  <span class="form-control w-25 bg-gradient-primary px-3 text-white">R$:</span><input id="precoItem" name="preco" class="form-control bg-gradient-secondary px-3 text-white" value="300" class="mb-5">
+                  <span class="form-control w-25 bg-gradient-primary px-3 text-white">R$:</span><input id="precoItem" name="preco" class="form-control bg-gradient-secondary px-3 text-white" value="" class="mb-5">
                   </div>
+                  <input class="form-control mt-3 text-center bg-gradient-secondary text-white" type="file" id="imagemItem">
+
+                  <span id="messageError" hidden></span>
 
                   </input>
                   <button id="btnSalvarAlteracaoItem" name="btnSalvarAlteracaoItem" class="text-body btn text-sm font-weight-bold mb-0 icon-move-right mt-auto">
@@ -441,7 +460,7 @@
                   >
                   <img
                   class="w-100 h-100 position-relative z-index-2 pt-4"
-                      src="../../images/work-1.jpg"
+                      src="../"
                     />
                   </div>
                 </div>
@@ -449,7 +468,21 @@
             </div>
           </div>
         </div>
-        <!-- posts END -->
+        <div class="card bg-gradient-dark mb-4 draggable" draggable="true">
+          <div class="card-body p-3">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="d-flex flex-column h-100">
+                  <h3 class="text-white">Trabalhos cadastrados</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Postar algo novo END -->
+        <div id="divItensPostados" class="mt4">
+          <!-------------------------------------->
+        </div>
       </div>
       <!-- End Navbar -->
     </main>
@@ -875,6 +908,7 @@
         },
       });
     </script>
+    <script src="../assets/js/dadosParaTratar/cadastrarNovoTrabalho.php/cadastrarNovoTrabalho.js"></script>
     <script>
       var win = navigator.platform.indexOf("Win") > -1;
       if (win && document.querySelector("#sidenav-scrollbar")) {
